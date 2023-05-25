@@ -1,11 +1,8 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 import Button from "components/Button/Button";
 import { ButtonWrapper } from "./FeedbackOptions.styled";
 
-class FeedbackOptions extends Component {
-    render() {
-        const { options, onLeaveFeedback } = this.props;
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         return (
             <ButtonWrapper>
                 {options.map((item) => {
@@ -13,7 +10,6 @@ class FeedbackOptions extends Component {
                 })}
             </ButtonWrapper>
         )
-    }
 }
 
 export default FeedbackOptions;

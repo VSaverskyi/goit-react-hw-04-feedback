@@ -1,10 +1,7 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 import { FeedbackCount, FeedbackPositive, FeedbackTotal, StatisticsWrapper } from "./Statistics.styled";
 
-class Statistics extends Component {
-    render() {
-        const { good, neutral, bad, total, positivePercentage } = this.props;
+const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
         return (
             <StatisticsWrapper>
                 <FeedbackCount>Good: {good}</FeedbackCount>
@@ -17,7 +14,6 @@ class Statistics extends Component {
                 </FeedbackPositive>
             </StatisticsWrapper>
         );
-    }
 }
 
 export default Statistics;

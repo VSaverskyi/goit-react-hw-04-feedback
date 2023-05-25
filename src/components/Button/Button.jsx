@@ -1,16 +1,12 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 import { ButtonFeedback } from "./Button.styled";
 
-class Button extends Component {
-    render() {
-        const { name, onClick } = this.props;
+const Button = ({ name, onClick }) => {
         return (
             <ButtonFeedback name={name} onClick={onClick} type="button">
-                        {name}
-                    </ButtonFeedback>
+                {name}
+            </ButtonFeedback>
         )
-    }
 }
 
 export default Button;
